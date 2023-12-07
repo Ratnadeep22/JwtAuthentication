@@ -16,9 +16,9 @@ namespace JwtAuthentication
             }).AddJwtBearer(beareroptions =>
                 {
                     beareroptions.TokenValidationParameters = new TokenValidationParameters {
-                        ValidAudience = configuration.GetValue<string>("Jwt:Audience"),
-                        ValidIssuer = configuration.GetValue<string>("Jwt:Issuer"),
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration.GetValue<string>("Jwt:SecretKey")!)),
+                        ValidAudience = configuration.GetValue<string>("JwtInfo:Audience"),
+                        ValidIssuer = configuration.GetValue<string>("JwtInfo:Issuer"),
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration.GetValue<string>("JwtInfo:SecretKey")!)),
                         ValidateAudience = true,
                         ValidateIssuer = true,
                         ValidateLifetime = true,

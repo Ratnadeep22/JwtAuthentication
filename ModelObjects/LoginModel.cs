@@ -1,5 +1,6 @@
 ﻿namespace ModelObjects;
 
+[Serializable]
 public class LoginModel
 {
     public string UserName { get; set; }
